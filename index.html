@@ -2,9 +2,11 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/style.css">
     <title>HTML Academy: Седона</title>
   </head>
   <body>
+    <div class="container">
     <header class="page-header">
       <nav class="page_navigation">
         <a class="header-logo" href="index.html">
@@ -21,16 +23,16 @@
             <a class="page-header-link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
-        <ul class="navigation-user">
-          <li class="navigation-item">
-            <a class="page-header-link" href="#">
+        <ul class="navigation-user-container">
+          <li class="header-user-control">
+            <a class="page-header-search" href="#">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
-          <li class="navigation-item">
+          <li class="header-user-control">
             <a class="page-header-favourites" href="#">Избранное</a>
           </li>
-          <li class="navigation-item">
+          <li class="header-user-control">
             <a class="page-header-booking" href="#">Хочу сюда!</a>
             <span class="page-header-booking-text">Хочу сюда!</span>
           </li>
@@ -44,8 +46,10 @@
         <img class="hero-logo" src="images/welcome.svg" width="458" height="352" alt="Добро пожаловать в Седону">
       </section>
       <section class="advantages">
+        <div class="advantages-header">
         <h2 class="advantages-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
         <p class="advantage-description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+        </div>
         <div class="advantages-card">
           <h3 class="advantages-card-title">Настоящий городок</h3>
           <p class="advantages-card-description">Седона — не аттракцион для туристов, там течёт своя жизнь
@@ -140,5 +144,6 @@
         <span class="visually-hidden">html-academy.</span>
       </a>
     </footer>
+  </div>
   </body>
 </html>
