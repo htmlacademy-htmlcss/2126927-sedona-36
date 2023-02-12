@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>Каталог</title>
     <base href="https://htmlacademy-htmlcss.github.io/2126927-sedona-36/2/">
 </head>
@@ -37,46 +38,51 @@
         </ul>
       </nav>
     </header>
-    <main class="main-catalog">
+    <main class="catalog-main">
       <section class="filter">
-        <h1 class="filter-title">Гостиницы Седоны</h1>
-        <div class="breadcrubs">
-          <a class="breadcrubs-logo" href="index.html"><img class="breadcrubs-icon" src="#"></a>
-          <img class="breadcrubs-icon" src="#">
-          <p class="breadcrubs-text">Гостиницы</p>
+        <div class="filter-head">
+        <h1 class="filter-head-title">Гостиницы Седоны</h1>
+        <ul class="breadcrubs">
+          <li class="breadcrumbs-item">
+          <a class="breadcrubs-link" href="index.html"></a>
+          </li>
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link breadcrumbs-link-current">Гостиницы</a>
+          </li>
+        </ul>
         </div>
         <form class="filter-form" action="https://echo.htmlacademy.ru/" method="post">
-          <fieldset class="filter-group">
-            <legend class="filter-group-title">Инфраструктура:</legend>
-            <ul class="filter-group-list">
-              <li class="filter-group-item">
-                <input class="filter-group-form" type="checkbox" id="swimmingpool" name="infrastracture" checked>
-                <label class="filter-form-label" for="swimmingpool">Бассейн</label>
+          <fieldset class="filter-catalog-group">
+            <legend class="filter-catalog-group-title">Инфраструктура:</legend>
+            <ul class="filter-catalog-group-list">
+              <li class="filter-catalog-group-item">
+                <input class="filter-catalog-checkbox visually-hidden" type="checkbox" id="swimmingpool" name="infrastracture" checked>
+                <label class="filter-form-control" for="swimmingpool">Бассейн</label>
+              </li>
+              <li class="filter-catalog-group-item">
+                <input class="filter-catalog-checkbox visually-hidden" type="checkbox" id="parking" name="infrastracture" value="parking" checked>
+                <label class="filter-catalog-group-control" for="parking">Парковка</label>
               </li>
               <li class="filter-group-item">
-                <input class="filter-group-form" type="checkbox" id="parking" name="infrastracture" value="parking" checked>
-                <label class="filter-form-label" for="parking">Парковка</label>
-              </li>
-              <li class="filter-group-item">
-                <input class="filter-group-form" type="checkbox" id="wifi" name="infrastracture" value="wifi" >
+                <input class="filter-catalog-checkbox visually-hidden" type="checkbox" id="wifi" name="infrastracture" value="wifi" >
                 <label class="filter-form-label" for="swimmingpool">Wi-fi</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="filter-group">
-            <legend class="filter-group-title">Тип жилья:</legend>
-            <ul class="filter-group-list">
-              <li class="filter-group-item">
-                <input class="filter-group-form" type="radio" id="hotel" name="hotels" checked>
-                <label class="filter-form-label" for="hotel">Гостиница</label>
+          <fieldset class="filter-catalog-group">
+            <legend class="filter-catalog-group-title">Тип жилья:</legend>
+            <ul class="filter-catalog-list">
+              <li class="filter-catalog-item">
+                <input class="filter-control-radio visually-hidden" type="radio" id="hotel" name="type-of-house" checked>
+                <label class="ilter-catalog-radio-label" for="hotel">Гостиница</label>
               </li>
               <li class="filter-group-item">
-                <input class="filter-group-form" type="radio" id="motel" name="hotels" >
-                <label class="filter-form-label" for="motel">Мотель</label>
+                <input class="filter-control-radio visually-hidden" type="radio" id="motel" name="type-of-house" >
+                <label class="ilter-catalog-radio-label" for="motel">Мотель</label>
               </li>
               <li class="filter-group-item">
-                <input class="filter-group-form" type="radio" id="apartment" name="hotels">
-                <label class="filter-form-label" for="apartment">Апартаменты</label>
+                <input class="filter-control-radio visually-hidden" type="radio" id="apartment" name="type-of-house">
+                <label class="ilter-catalog-radio-label" for="apartment">Апартаменты</label>
               </li>
             </ul>
           </fieldset>
@@ -105,7 +111,7 @@
               </div>
             </div>
           </fieldset>
-          <div class="form-button">
+          <div class="form-buttons">
             <button class="form-button-submit" type="submit">Применить</button>
             <button class="form-button-reset" type="reset">Сбросить</button>
           </div>
@@ -121,7 +127,7 @@
             <option class="results-filter-select-item" value="cheap">Сначала дешёвые</option>
             <option class="results-filter-select-item" value="expensive">Сначала дорогие</option>
           </select>
-          <ul class="results-filter-icons">
+          <ul class="results-filter-list">
             <li class="results-filter-item">
               <a class="results-filter-item-link" href="#"><span class="visually-hidden">Отображение карточками</span></a>
             </li>
@@ -138,7 +144,7 @@
         <ul class="results-list">
           <li class="rusults-card">
             <a class="results-card-link" href="#">
-              <img class="results-card-photo" src="images/hotel-amara-resort.jpg" width="300" height="212" alt="amara resort photo">
+              <img class="results-card-image" src="images/hotel-amara-resort.jpg" width="300" height="212" alt="amara resort photo">
               <h3 class="results-card-title">Amara Resort & Spa</h3>
             </a>
             <div class="results-card-container">
@@ -152,7 +158,7 @@
           </li>
           <li class="rusults-card">
             <a class="results-card-link" href="#">
-              <img class="results-card-photo" src="images/hotel-poco-diablo.jpg" width="300" height="212" alt="pico diablo photo">
+              <img class="results-card-image" src="images/hotel-poco-diablo.jpg" width="300" height="212" alt="pico diablo photo">
               <h3 class="results-card-title">Villas at Poco Diablo</h3>
             </a>
             <div class="results-card-container">
@@ -166,7 +172,7 @@
           </li>
           <li class="rusults-card">
             <a class="results-card-link" href="#">
-              <img class="results-card-photo" src="images/hotel-desert-quail.jpg" width="300" height="212" alt="desert quail photo">
+              <img class="results-card-image" src="images/hotel-desert-quail.jpg" width="300" height="212" alt="desert quail photo">
               <h3 class="results-card-title">Desert Quail Inn</h3>
             </a>
             <div class="results-card-container">
@@ -180,7 +186,7 @@
           </li>
           <li class="rusults-card">
             <a class="results-card-link" href="#">
-              <img class="results-card-photo" src="images/hotel-greentree.jpg" width="300" height="212" alt="GreenTree photo">
+              <img class="results-card-image" src="images/hotel-greentree.jpg" width="300" height="212" alt="GreenTree photo">
               <h3 class="results-card-title">GreenTree Inn</h3>
             </a>
             <div class="results-card-container">
@@ -193,6 +199,7 @@
             </div>
           </li>
         </ul>
+        <div class="pagination-container">
         <ul class="pagination">
           <li class="pagination-item">
             <a class="pagination-link">1</a>
@@ -213,6 +220,7 @@
             <a class="pagination-link button" href="#">10</a>
           </li>
         </ul>
+      </div>
       </section>
       </main>
       <footer class="footer">
